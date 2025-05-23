@@ -1,0 +1,26 @@
+{
+  "name": "react_dbsm_modules",
+  "version": "1.0.3",
+  "description": "",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/Xhale-1/react_dbsm_modules"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tauri-apps/api": "^2.5.0",
+    "@types/react": "^19.1.5",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "react": "^19.1.0"
+  }
+}

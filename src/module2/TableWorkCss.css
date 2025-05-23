@@ -1,0 +1,55 @@
+/* Общие стили для контейнера */
+.grid-item200 {
+    width: 100%; /* Или задайте конкретную ширину, если нужно */
+    overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Стили для таблицы */
+.tab00 {
+    width: 100%;
+    border-collapse: collapse; /* Убирает лишние отступы между ячейками */
+    font-family: Arial, sans-serif; /* Четкий и читаемый шрифт */
+    font-size: 14px;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Стили для заголовков таблицы */
+.tab00 thead tr th {
+    background-color: #f4f4f4; /* Светлый фон для заголовков */
+    color: #333; /* Темный текст */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Границы между ячейками */
+    font-weight: bold; /* Жирный шрифт */
+    text-transform: uppercase; /* Заглавные буквы */
+    letter-spacing: 1px; /* Расстояние между буквами */
+}
+
+/* Стили для строк таблицы */
+.tab00 tbody tr {
+    border-bottom: 1px solid #ddd; /* Линия между строками */
+}
+
+/* Стили для ячеек таблицы */
+.tab00 tbody td {
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Границы между ячейками */
+    color: #555; /* Цвет текста */
+}
+
+/* Стили для четных строк (зебра-эффект) */
+.tab00 tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Светлый фон для четных строк */
+}
+
+/* Стили для нечетных строк */
+.tab00 tbody tr:nth-child(odd) {
+    background-color: #fff; /* Белый фон для нечетных строк */
+}
+
+/* Стили для строки при наведении курсора */
+.tab00 tbody tr:hover {
+    background-color: #f1f1f1; /* Фон при наведении */
+    cursor: pointer; /* Курсор "рука" */
+}
