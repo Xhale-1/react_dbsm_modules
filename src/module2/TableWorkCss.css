@@ -2,7 +2,8 @@
 .grid-item200 {
     width: 100%; /* Или задайте конкретную ширину, если нужно */
     overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
-    padding: 10px;
+    overflow-y: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -17,39 +18,39 @@
 
 /* Стили для заголовков таблицы */
 .tab00 thead tr th {
-    background-color: #f4f4f4; /* Светлый фон для заголовков */
-    color: #333; /* Темный текст */
+    background-color: #ffffff; /* Светлый фон для заголовков */
+    color: #000000; /* Темный текст */
     padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Границы между ячейками */
-    font-weight: bold; /* Жирный шрифт */
-    text-transform: uppercase; /* Заглавные буквы */
+    border: 1px solid #000000; /* Границы между ячейками */
+    font-weight: normal; /* Жирный шрифт */
+    text-transform: capitalize; /* Заглавные буквы */
     letter-spacing: 1px; /* Расстояние между буквами */
 }
 
 /* Стили для строк таблицы */
 .tab00 tbody tr {
-    border-bottom: 1px solid #ddd; /* Линия между строками */
+    border-bottom: 1px solid #ffffff; /* Линия между строками */
 }
 
 /* Стили для ячеек таблицы */
 .tab00 tbody td {
     padding: 10px; /* Внутренние отступы */
-    border: 1px solid #ccc; /* Границы между ячейками */
-    color: #555; /* Цвет текста */
+    border: 1px solid #000000; /* Границы между ячейками */
+    color: #000000; /* Цвет текста */
 }
 
-/* Стили для четных строк (зебра-эффект) */
+/* Стили для четных строк (зебра-эффект)
 .tab00 tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Светлый фон для четных строк */
+    background-color: #f9f9f9; /* Светлый фон для четных строк 
 }
 
-/* Стили для нечетных строк */
+/* Стили для нечетных строк 
 .tab00 tbody tr:nth-child(odd) {
-    background-color: #fff; /* Белый фон для нечетных строк */
-}
+    background-color: #fff; /* Белый фон для нечетных строк 
+} */
 
-/* Стили для строки при наведении курсора */
+/* Стили для строки при наведении курсора 
 .tab00 tbody tr:hover {
-    background-color: #f1f1f1; /* Фон при наведении */
-    cursor: pointer; /* Курсор "рука" */
-}
+    background-color: #f1f1f1; /* Фон при наведении 
+    cursor: pointer; /* Курсор "рука" 
+}*/

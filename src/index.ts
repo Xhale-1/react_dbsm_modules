@@ -1,4 +1,4 @@
-import TableWork from './module2/mod2_table_work';
+
 
 export * from './module1/module-query_preveiw';
 export * from './module1/module-query_workspace';
