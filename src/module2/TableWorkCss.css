@@ -38,19 +38,3 @@
     border: 1px solid #000000; /* Границы между ячейками */
     color: #000000; /* Цвет текста */
 }
-
-/* Стили для четных строк (зебра-эффект)
-.tab00 tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Светлый фон для четных строк 
-}
-
-/* Стили для нечетных строк 
-.tab00 tbody tr:nth-child(odd) {
-    background-color: #fff; /* Белый фон для нечетных строк 
-} */
-
-/* Стили для строки при наведении курсора 
-.tab00 tbody tr:hover {
-    background-color: #f1f1f1; /* Фон при наведении 
-    cursor: pointer; /* Курсор "рука" 
-}*/
