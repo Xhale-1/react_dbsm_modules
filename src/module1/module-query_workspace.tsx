@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import { listen, UnlistenFn } from '@tauri-apps/api/event';
 import { invoke } from "@tauri-apps/api/core";
+import { emit } from '@tauri-apps/api/event';
+
+
 
 
 const Query_workspace = () => {
@@ -15,20 +18,24 @@ const Query_workspace = () => {
   }
 
 
+  useEffect(() => {
+    // Уведомляем бэкенд о готовности фронтенда
+    emit("frontend_ready", {}).catch(err => console.error("Failed to emit frontend_ready", err));
+  }, []);
 
 
 
 
-    useEffect(() => { startQuery();}, []); 
+    // useEffect(() => { startQuery();}, []); 
 
-    const startQuery = async () => {
-        const query1 = "SELECT COUNT(*) FROM E3_ADMIN.\"ComponentData\" ";
-        const query2 = "SELECT COUNT(*) FROM E3_ADMIN.\"SymbolData\" ";
-        const dev: string = await invoke("simple_query", { query: query1 });
-        const sym: string = await invoke("simple_query", { query: query2 });
-        setDevcount(dev);
-        setSymcount(sym);
-      };
+    // const startQuery = async () => {
+    //     const query1 = "SELECT COUNT(*) FROM E3_ADMIN.\"ComponentData\" ";
+    //     const query2 = "SELECT COUNT(*) FROM E3_ADMIN.\"SymbolData\" ";
+    //     const dev: string = await invoke("simple_query", { query: query1 });
+    //     const sym: string = await invoke("simple_query", { query: query2 });
+    //     setDevcount(dev);
+    //     setSymcount(sym);
+    //   };
 
 
 
@@ -54,18 +61,18 @@ const Query_workspace = () => {
         }, dependencies);
       };
     
-    // listen_backend<string>('dev', (payload) => {
-    //   const json: Format = JSON.parse(payload);
-    //   const firstElement = json.data[0];
-    //   const value = Object.values(firstElement)[0];
-    //   setDevcount(value);
-    //   });
-    // listen_backend<string>('sym', (payload) => {
-    //   const json: Format = JSON.parse(payload);
-    //   const firstElement = json.data[0];
-    //   const value = Object.values(firstElement)[0];
-    //   setSymcount(value);
-    //   });
+    listen_backend<string>('dev', (payload) => {
+      const json: Format = JSON.parse(payload);
+      const firstElement = json.data[0];
+      const value = Object.values(firstElement)[0];
+      setDevcount(value);
+      });
+    listen_backend<string>('sym', (payload) => {
+      const json: Format = JSON.parse(payload);
+      const firstElement = json.data[0];
+      const value = Object.values(firstElement)[0];
+      setSymcount(value);
+      });
 
 
     return (
